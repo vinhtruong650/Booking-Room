@@ -12,6 +12,8 @@ export async function GET(request: NextRequest) {
     const checkIn = checkInDate ? new Date(checkInDate) : undefined;
     const checkOut = checkOutDate ? new Date(checkOutDate) : undefined;
 
+    if(!checkIn && !checkOut) return NextResponse.json({ error: 'Invalid params' }, { status: 400 });
+
     const whereCondition: any = {
       bookings: {
         none: {
