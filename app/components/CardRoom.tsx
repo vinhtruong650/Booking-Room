@@ -40,7 +40,7 @@ export default function CardRoom(props: Props) {
           {props.location}
         </p>
         <Link
-          href="#"
+          href={`/hotels/${props.id}`}
           className="sm:w-full block md:inline text-center px-5 py-2.5 rounded-lg text-white text-sm tracking-wider border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
         >
           See Detail
