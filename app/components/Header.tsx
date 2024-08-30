@@ -51,7 +51,7 @@ export default function Header() {
                 href="/"
                 className="hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]"
               >
-                Rooms
+                Phòng
               </Link>
             </li>
             <li className="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
@@ -59,7 +59,7 @@ export default function Header() {
                 href="#"
                 className="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
               >
-                About
+                Giới thiệu
               </Link>
             </li>
             <li className="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
@@ -67,7 +67,7 @@ export default function Header() {
                 href="#"
                 className="hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
               >
-                Contact
+                Liên hệ
               </Link>
             </li>
           </ul>
@@ -75,10 +75,10 @@ export default function Header() {
 
         <div className="flex max-lg:ml-auto space-x-3">
           <button className="px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]">
-            Login
+            Đăng Nhập
           </button>
           <button className="px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]">
-            Sign up
+            Đăng Ký
           </button>
 
           <button id="toggleOpen" className="lg:hidden">

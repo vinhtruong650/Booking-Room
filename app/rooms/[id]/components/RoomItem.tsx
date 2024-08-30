@@ -52,7 +52,7 @@ export default function RoomItem(props: props) {
             <div className="mt-5 text-red-400">{`${data?.price} USD/Night`}</div>
             <Link
               href={`/bookings/${props.idRoom}?check_in_date=${check_in_date}&check_out_date=${check_out_date}`}
-              className="sm:w-full block md:inline text-center px-5 py-2.5 rounded-lg text-white text-sm tracking-wider border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
+              className=" block md:inline text-center px-5 py-2.5 rounded-lg text-white text-sm tracking-wider border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
             >
               Đặt phòng
             </Link>

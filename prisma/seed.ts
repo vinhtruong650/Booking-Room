@@ -3,6 +3,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
+  await prisma.booking.deleteMany();
   await prisma.room.deleteMany();
 
   const rooms = [
@@ -43,7 +44,6 @@ async function main() {
     },
   ];
 
-  // Nhập dữ liệu vào bảng Room
   for (const room of rooms) {
     await prisma.room.create({
       data: room,
