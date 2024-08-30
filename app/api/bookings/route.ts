@@ -1,3 +1,4 @@
+import {  STATUS_SUCCESS } from "@/app/constant/constant";
 import prisma from "@/app/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -23,6 +24,7 @@ export async function POST(request: NextRequest) {
     const existingBookings = await prisma.booking.findMany({
       where: {
         roomId: Number(roomId),
+        status: STATUS_SUCCESS,
         OR: [
           {
             checkInDate: { lt: checkOut },
@@ -46,7 +48,7 @@ export async function POST(request: NextRequest) {
         userName,
         checkInDate: checkIn,
         checkOutDate: checkOut,
-        status: 'success',
+        status: STATUS_SUCCESS,
       },
     });
 
@@ -69,3 +71,4 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
     }
   }
+
