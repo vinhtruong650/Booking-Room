@@ -14,17 +14,17 @@ type Props = {
 export default function CardRoom(props: Props) {
   return (
     <div className="bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-lg overflow-hidden font-[sans-serif] mt-4">
-      <div className="min-h-[256px] relative">
+      <div className=" relative">
         <img src={props.imageUrl} className="w-full" />
-        <p className="absolute text-white bottom-0 left-0 p-5">
+        <p className="absolute text-white bottom-2.5 md:bottom-0 left-0 md:p-5 px-3">
           {props.location}
         </p>
-        <p className="absolute text-white bottom-0 right-0 p-5">
+        <p className="absolute md:text-white text-red-400 md:bottom-0 bottom-2.5 right-0 md:p-5 px-3">
           {`${props.price} USD/Night`}
         </p>
       </div>
 
-      <div className="p-6">
+      <div className="md:p-6 p-3">
         <h3 className="text-gray-800 flex items-center justify-between text-xl font-bold">
           {props.name}
           <span className="flex">
@@ -41,7 +41,7 @@ export default function CardRoom(props: Props) {
         </p>
         <Link
           href="#"
-          className=" px-5 py-2.5 rounded-lg text-white text-sm tracking-wider border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
+          className="sm:w-full block md:inline text-center px-5 py-2.5 rounded-lg text-white text-sm tracking-wider border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
         >
           See Detail
         </Link>
