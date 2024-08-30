@@ -1,13 +1,58 @@
 import prisma from "@/app/lib/prisma";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
-    const rooms = await prisma.room.findMany();
-    return new Response(JSON.stringify(rooms), {
-      headers: { 'Content-Type': 'application/json' },
+    const searchParams = request.nextUrl.searchParams;
+
+    const search = searchParams.get("search") || "";
+    const checkInDate = searchParams.get("check_in_date") || "";
+    const checkOutDate = searchParams.get("check_out_date") || "";
+    
+    const checkIn = checkInDate ? new Date(checkInDate) : undefined;
+    const checkOut = checkOutDate ? new Date(checkOutDate) : undefined;
+
+    const whereCondition: any = {
+      bookings: {
+        none: {
+          OR: [
+            {
+              checkInDate: {
+                lt: checkOut,
+              },
+              checkOutDate: {
+                gt: checkIn,
+              },
+            },
+            {
+              checkInDate: {
+                gte: checkIn,
+                lt: checkOut,
+              },
+            },
+            {
+              checkOutDate: {
+                gt: checkIn,
+                lte: checkOut,
+              },
+            },
+          ],
+        },
+      },
+    };
+
+    if (search) {
+      whereCondition.location = {
+        contains: search,
+        mode: "insensitive",
+      };
+    }
+
+    const rooms = await prisma.room.findMany({
+      where: whereCondition,
     });
+    return NextResponse.json(rooms, { status: 200 });
   } catch (error) {
-    console.error('Error fetching rooms:', error);
-    return new Response('Internal Server Error', { status: 500 });
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
