@@ -96,6 +96,8 @@ export default function Home() {
                 name={room.name}
                 location={room.location}
                 price={room.price}
+                check_in_date={filterDate?.startDate}
+                check_out_date={filterDate?.endDate}
               ></CardRoom>
             );
           })

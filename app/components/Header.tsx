@@ -48,7 +48,7 @@ export default function Header() {
             </li>
             <li className="max-lg:border-b border-gray-300 max-lg:py-3 px-3">
               <Link
-                href="#"
+                href="/"
                 className="hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]"
               >
                 Rooms

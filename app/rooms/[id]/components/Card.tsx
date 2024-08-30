@@ -11,9 +11,9 @@ export default function Card(props: props) {
       <div className="p-5">
         <h5 className="text-lg text-blue-900">{props.title}</h5>
         <div className="px-3">
-          {/* {props.listChildren.map((item, idx) => (
+          {props.listChildren.map((item, idx) => (
             <div key={idx}>{item}</div>
-          ))} */}
+          ))}
         </div>
       </div>
     </div>
