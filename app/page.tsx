@@ -70,6 +70,7 @@ export default function Home() {
               required
               containerClassName="mt-2.5 sm:mt-0 border w-full rounded"
               value={filterDate}
+              minDate={new Date()}
               onChange={(newValue) => {
                 setFilterDate(newValue);
               }}
