@@ -20,6 +20,7 @@ export default function RoomItem(props: props) {
   const check_out_date = searchParams.get("check_out_date");
 
   useEffect(() => {
+    setIsLoading(true);
     const fetchData = async () => {
       try {
         const response = await axios.get(`/api/room/${props.idRoom}`);
@@ -32,6 +33,9 @@ export default function RoomItem(props: props) {
     };
     fetchData();
   }, []);
+
+  if (error) return <></>;
+  if (isLoading) return <></>;
 
   return (
     <div className="bg-gray-200 shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full rounded-lg overflow-hidden font-[sans-serif] mt-4">
