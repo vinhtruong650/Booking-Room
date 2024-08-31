@@ -14,27 +14,38 @@ export default function Hotel({ params }: { params: { id: string } }) {
           </h3>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-2 py-5">
-          <img
-            className="col-span-2 row-span-2 h-full object-cover"
-            src="https://media.vneconomy.vn/w800/images/upload/2021/09/04/34852980014-503e510db0-k-1519666490.jpg"
-          />
-          <img
-            className="object-fill col-span-1 row-span-1"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQc4O5R29AXNp7tnU4MjHiVrkjIdmEpLlM3g&s"
-          />
-          <img
-            className="object-fill col-span-1 row-span-1"
-            src="https://media.vneconomy.vn/w800/images/upload/2021/09/04/34852980014-503e510db0-k-1519666490.jpg"
-          />
-          <img
-            className="object-fill col-span-1 row-span-1"
-            src="https://cdn-kvweb.kiotviet.vn/kiotviet-website/wp-content/uploads/2023/07/gia-phong-khach-san.png"
-          />
-          <img
-            className="object-fill col-span-1 row-span-1"
-            src="https://media.vneconomy.vn/w800/images/upload/2021/09/04/34852980014-503e510db0-k-1519666490.jpg"
-          />
+          <div className="col-span-2 row-span-2 h-full">
+            <img
+              className="w-full h-full object-cover"
+              src="https://media.vneconomy.vn/w800/images/upload/2021/09/04/34852980014-503e510db0-k-1519666490.jpg"
+            />
+          </div>
+          <div className="col-span-1 row-span-1 h-full">
+            <img
+              className="w-full h-full object-cover"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQc4O5R29AXNp7tnU4MjHiVrkjIdmEpLlM3g&s"
+            />
+          </div>
+          <div className="col-span-1 row-span-1 h-full">
+            <img
+              className="w-full h-full object-cover"
+              src="https://studiochupanhdep.com/Upload/Images/Album/anh-phong-khach-san-dep-03.jpg"
+            />
+          </div>
+          <div className="col-span-1 row-span-1 h-full">
+            <img
+              className="w-full h-full object-cover"
+              src="https://cdn-kvweb.kiotviet.vn/kiotviet-website/wp-content/uploads/2023/07/gia-phong-khach-san.png"
+            />
+          </div>
+          <div className="col-span-1 row-span-1 h-full">
+            <img
+              className="w-full h-full object-cover"
+              src="https://www.hoteljob.vn/files/2015/7-luu-y-khi-dat-phong-khach-san.jpg"
+            />
+          </div>
         </div>
+
         <div className="grid md:grid-cols-2 grid-cols-1 gap-2">
           <Card
             title="Tiện nghi"

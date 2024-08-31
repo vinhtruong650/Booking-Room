@@ -16,18 +16,18 @@ type Props = {
 
 export default function CardRoom(props: Props) {
   return (
-    <div className="bg-white shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-lg overflow-hidden font-[sans-serif] mt-4">
-      <div className=" relative">
-        <img src={props.imageUrl} className="w-full" />
+    <div className="bg-white grid grid-rows-3 shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-lg overflow-hidden font-[sans-serif] mt-4">
+      <div className="relative row-span-3">
+        <img src={props.imageUrl} className="w-full h-full object-cover" />
         <p className="absolute text-white bottom-2.5 md:bottom-0 left-0 md:p-5 px-3">
-          {props.location}
+          {props.location?.split(", ")[0] ?? ""}
         </p>
         <p className="absolute md:text-white text-red-400 md:bottom-0 bottom-2.5 right-0 md:p-5 px-3">
           {`${props.price} USD/Night`}
         </p>
       </div>
 
-      <div className="md:p-6 p-3">
+      <div className="md:p-6 p-3 row-span-1">
         <h3 className="text-gray-800 flex items-center justify-between text-xl font-bold">
           {props.name}
           <span className="flex">
