@@ -41,10 +41,10 @@ export default function RoomItem(props: props) {
     <div className="bg-gray-200 shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full rounded-lg overflow-hidden font-[sans-serif] mt-4">
       <div className="p-5">
         <div className="grid grid-cols-3 grid-rows-1 gap-2">
-          <div>
+          <div className="md:col-span-1 col-span-3">
             <img src={data?.imageUrl} className="object-cover" />
           </div>
-          <div className="col-span-2 px-3 flex flex-col justify-evenly items-start">
+          <div className="md:col-span-2 col-span-3 px-3 flex flex-col justify-evenly items-start">
             <div>
               <h5 className="text-lg text-blue-900">{data?.name}</h5>
               <p className="flex items-center gap-3">
