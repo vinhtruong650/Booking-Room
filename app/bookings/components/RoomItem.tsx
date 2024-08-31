@@ -97,7 +97,7 @@ export default function BookingsForm(props: props) {
           <div className="col-span-3 md:col-span-1">
             <img src={data?.imageUrl} className="object-cover" />
           </div>
-          <div className=" px-3 col-span-2 md:col-span-1 flex flex-col justify-evenly items-start">
+          <div className=" px-3 col-span-3 md:col-span-1 flex flex-col justify-evenly items-start">
             <div>
               <h5 className="text-lg text-blue-900">{data?.name}</h5>
               <p className="flex items-center gap-3">
